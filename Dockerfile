@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 MAINTAINER Lars Kellogg-Stedman <lars@oddbit.com>
 
 ENV SQUEEZE_VOL /srv/squeezebox
