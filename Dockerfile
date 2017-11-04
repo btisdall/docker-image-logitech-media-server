@@ -4,7 +4,7 @@ MAINTAINER Lars Kellogg-Stedman <lars@oddbit.com>
 ENV SQUEEZE_VOL /srv/squeezebox
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-ENV PACKAGE_VERSION_URL=http://www.mysqueezebox.com/update/?version=7.9.1&revision=1&geturl=1&os=deb
+ENV PACKAGE_VERSION_URL=http://downloads.slimdevices.com/nightly/7.9/sc/c558cb2/logitechmediaserver_7.9.1~1509357021_all.deb
 
 RUN apt-get update && \
 	apt-get -y install \
@@ -17,8 +17,7 @@ RUN apt-get update && \
     sox \
     libio-socket-ssl-perl \
   && \
-	url=$(curl "$PACKAGE_VERSION_URL" | sed 's/_all\.deb/_amd64\.deb/') && \
-	curl -Lsf -o /tmp/logitechmediaserver.deb $url && \
+	curl -Lsf -o /tmp/logitechmediaserver.deb ${PACKAGE_VERSION_URL} && \
 	dpkg -i /tmp/logitechmediaserver.deb && \
 	rm -f /tmp/logitechmediaserver.deb && \
 	apt-get clean
