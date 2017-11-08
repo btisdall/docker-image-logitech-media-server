@@ -9,7 +9,6 @@ ENV PACKAGE_VERSION_URL=http://downloads.slimdevices.com/nightly/7.9/sc/c558cb2/
 RUN apt-get update && \
 	apt-get -y install \
     curl \
-    sudo \
     wget \
     faad \
     flac \
