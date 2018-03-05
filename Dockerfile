@@ -15,6 +15,7 @@ RUN apt-get update && \
     lame \
     sox \
     libio-socket-ssl-perl \
+    liblinux-inotify2-perl \
   && \
 	curl -Lsf -o /tmp/logitechmediaserver.deb ${PACKAGE_VERSION_URL} && \
 	dpkg -i /tmp/logitechmediaserver.deb && \
