@@ -4,7 +4,7 @@ services:
   lms:
     container_name: lms
     restart: always
-    image: "${IMAGE}"
+    image: "${IMAGE}:${TAG}"
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ${CONFIG_DIR}:/srv/squeezebox
