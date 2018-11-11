@@ -4,7 +4,7 @@ MAINTAINER Lars Kellogg-Stedman <lars@oddbit.com>
 ENV SQUEEZE_VOL /srv/squeezebox
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
-ENV PACKAGE_VERSION_URL=http://downloads.slimdevices.com/nightly/7.9/sc/3274df9fa1bdbffff7118a9a6a7d6394536047df/logitechmediaserver_7.9.2~1541570037_amd64.deb
+ENV PACKAGE_VERSION_URL=http://downloads.slimdevices.com/nightly/7.9/sc/cf2920cf3d108ed1e5dd3e5cb3bd5a18b28c8d39/logitechmediaserver_7.9.2~1541869104_amd64.deb
 
 RUN apt-get update && \
 	apt-get -y install \
